@@ -7,13 +7,11 @@ Python standard library only; deterministic; byte-identical on repeat runs.
 
 import os
 
-EXCUSE = (
-    "I was on schedule until my context window filled up, so I evicted "
-    "the deadline to make room for the meeting about the deadline."
-)
+EXCUSE = "I was on schedule until my context window filled up, so I evicted the deadline to make room for the meeting about the deadline."
 
 
 def main():
+    # One excuse, exactly as the agent would say it to whoever is waiting.
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(EXCUSE)
